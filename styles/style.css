@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+    --text-color-main: black;
+    --text-color-second: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+    --color-white: #fff;
+    --box-shadow-text: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    --bg-button-active: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    --box-shadow-batton-active: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    --border-radius-button: 100px;
+    --border-color: #EFEFEF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+button,
+a {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color-main);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-color {
+    color: #60B021;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.header-phone {
+    display: none;
+}
+
+.header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 23px 26px;
+    height: 75px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 134px;
+}
+
+.logo__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    background-image: url('/assent/logo.svg');
+    display: block;
+    width: 151px;
+    height: 26px;
+}
+
+.gradient-color-text {
+    background-image: var(--text-color-second);
+    /* background-clip: text;
+    color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navigation {
+    height: auto;
+}
+
+.navigation__list {
+    display: flex;
+    align-items: center;
+    width: 478px;
+    justify-content: space-between;
+}
+
+.navigation__list__item__link {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu__list__item {
+    padding: 28px;
+    padding-top: 27px;
+    border-left: 1px solid var(--border-color);
+    height: 75px;
+}
+
+.counter {
+    position: relative;
+}
+
+.counter::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow-text);
+    top: 13px;
+    right: 16px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.star-counter::before {
+    content: '5';
+}
+
+.compare-counter::before {
+    content: '7';
+}
+
+.cart-counter::before {
+    content: '2';
+    background: var(--bg-button-active);
+    box-shadow: none;
+    color: var(--color-white);
+}
+
+.hero {
+    height: 650px;
+    background-image: url('../assent/hero/stacey-gabrielle-koenitz-rozells-bduka9UJzrk-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--border-color);
+}
+
+.hero-container {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    padding: 50px 0;
+}
+
+.hero__title {
+    max-width: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__title::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: var(--bg-button-active);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    z-index: -1;
+}
+
+.hero__title__text-box {
+    display: inline-block;
+    background-color: var(--color-white);
+    padding: 13px 20px;
+    text-transform: uppercase;
+    box-shadow: var(--box-shadow-text);
+    line-height: 1.5;
+    z-index: 10;
+}
+
+.features {
+    margin-bottom: 96px;
+}
+
+.features-container {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.features__card {
+    width: 200px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    background-color: #F5F5F5;
+}
+
+.features__card__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.pricing__title {
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+.pricing__card {
+    width: 350px;
+    height: 410px;
+    border: 1px solid var(--border-color);
+    padding: 21px 0 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.pricing__card::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('/assent/header/compare.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    right: 21px;
+    top: 21px;
+}
+
+.pricing__card::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('/assent/header/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    right: 21px;
+    top: 57px;
+}
+
+
+.pricing__card__img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 32px;
+}
+
+.pricing__card__text {
+    font-weight: 400;
+    color: #75758A;
+    margin-bottom: 24px;
+}
+
+.pricing__card__table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.pricing__card__table tr {
+    width: 100%;
+}
+
+.pricing__card__table td {
+    width: 25%;
+    border: 1px solid var(--border-color);
+    padding: 17px 9px 13px;
+    text-align: center;
+}
+
+.pricing__card__table__title {
+    font-weight: bold;
+    font-style: 14px;
+    line-height: 20px;
+}
+
+.pricing__card__table__text {
+    color: #75758A;
+}
+
+.pricing__card__table {
+    margin-bottom: 20px;
+}
+
+.pricing__card__buttons {
+    display: flex;
+    align-content: center;
+    gap: 20px;
+}
+
+.button {
+    width: 140px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 100px;
+    color: #000;
+    padding: 12px 0 11px;
+    text-align: center;
+    border: 1px solid transparent;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.main-button {
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.pricing__wrapper {
+    display: flex;
+    align-content: center;
+    gap: 22px;
+    justify-content: center;
+}
+
+.pricing__slider {
+    margin-bottom: 93px;
+    position: relative;
+}
+
+.control__button {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    border: none;
+    background-image: url('../assent/bottom.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 110px;
+    cursor: pointer;
+}
+
+.left-button {
+    left: -10px;
+}
+
+.right-button {
+    right: -10px;
+    transform: rotate(180deg);
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.question {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question__title {
+    margin-bottom: 24px;
+}
+
+.question__text {
+    max-width: 590px;
+    line-height: 26px;
+    margin-bottom: 17px;
+    text-align: center;
+    color: #75758A;
+}
+
+.question__title a {
+    font-weight: bold;
+}
+
+.question__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.question__button {
+    width: 260px;
+    height: 55px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+    .header {
+        display: none;
+    }
+
+    .gradient-color-text {
+        background: #fff;
+        color: #000;
+        -webkit-text-fill-color: #000;
+    }
+
+    .header-phone {
+        display: block;
+        height: 45px;
+        padding: 14px 0 15px;
+    }
+
+    .container {
+        max-width: 335px;
+    }
+
+    .logo__link {
+        background-image: url('/assent/logo-phone.svg');
+        background-repeat: no-repeat;
+        width: 45px;
+        position: absolute;
+        left: calc(50% - 22.5px);
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu__list {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu__list__item {
+        padding: 0;
+        position: relative;
+        border: none;
+        height: auto;
+    }
+
+    .counter::before {
+        top: -3px;
+        right: -6px;
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: var(--bg-button-active);
+        box-shadow: none;
+    }
+
+    .hero {
+        background-image: url('/assent/hero/banner-phone.jpg');
+        background-position: 50% 50%;
+        height: 375px;
+        margin-bottom: 20px;
+    }
+
+    .hero-container {
+        padding: 20px 0;
+    }
+
+    .hero__title {
+        font-size: 16px;
+        word-spacing: 0;
+    }
+
+    .hero__title::before {
+        width: 30px;
+        height: 30px;
+        left: -15px;
+        bottom: -15px;
+    }
+
+    .hero__title__text-box {
+        padding: 0;
+        background: none;
+        text-transform: none;
+        box-shadow: none;
+    }
+
+    .hero__title__text-box__phone {
+        display: inline-block;
+        background-color: var(--color-white);
+        padding: 12px 15px;
+        text-transform: none;
+        box-shadow: var(--box-shadow-text);
+        line-height: 1.5;
+        z-index: 10;
+    }
+
+    .features {
+        margin-bottom: 46px;
+    }
+
+    .features-container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .features__card {
+        width: 160px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 29px 20px;
+        box-sizing: border-box;
+    }
+    .pricing {
+        margin-bottom: 46px;
+    }
+    .title-color {
+        color: #000;
+    }
+    .control__button {
+        display: none;
+    }
+    .pricing__wrapper {
+        flex-direction: column;
+
+    }
+    .question__text {
+        font-size: 14px;
+    }
+    .question__buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
